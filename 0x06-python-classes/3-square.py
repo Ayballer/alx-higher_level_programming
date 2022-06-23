@@ -1,13 +1,22 @@
 #!/usr/bin/python3
+"1-square.py define"
+
+
 class Square:
+    """Class Square
+    """
+
     def __init__(self, size=0):
-        if type(size) != int:
+        """Def
+        """
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-
-        self.__size = size
+        else:
+            self.__size = size
 
     def area(self):
-        ar = self.__size * self.__size
-        return ar
+        """Def area
+        """
+        return self.__size ** 2
